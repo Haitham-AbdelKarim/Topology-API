@@ -1,0 +1,58 @@
+{
+  "id": "top2",
+  "components": [
+    {
+      "specs": {
+        "default": 0.67,
+        "min": 0.6,
+        "max": 0.7
+      },
+      "netlist": {
+        "pterm": "vdd",
+        "nterm": "vss1"
+      },
+      "type": "diode",
+      "id": "d1"
+    },
+    {
+      "specs": {
+        "default": 1.5,
+        "min": 1.0,
+        "max": 2.0
+      },
+      "netlist": {
+        "drain": "vdd",
+        "source": "gnd",
+        "gate": "vin"
+      },
+      "type": "nmos",
+      "id": "m1"
+    },
+    {
+      "specs": {
+        "default": 4.0,
+        "min": 3.0,
+        "max": 5.0
+      },
+      "netlist": {
+        "t1": "vss1",
+        "t2": "vss2"
+      },
+      "type": "inductor",
+      "id": "l1"
+    },
+    {
+      "specs": {
+        "default": 5.0,
+        "min": 4.0,
+        "max": 6.0
+      },
+      "netlist": {
+        "t1": "vss2",
+        "t2": "vdd"
+      },
+      "type": "capacitor",
+      "id": "c1"
+    }
+  ]
+}

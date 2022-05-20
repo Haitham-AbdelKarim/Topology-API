@@ -1,0 +1,963 @@
+{
+	"info": {
+		"_postman_id": "d12cc603-8a74-4d61-95ae-a65523aa67d5",
+		"name": "Topology API Test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21075351"
+	},
+	"item": [
+		{
+			"name": "Read Topology1 From Memory",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Read Topology1 From Memory\",function(){\r",
+							"    pm.response.to.have.status(200);\r",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44339/api/values?filename=topology1.json",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44339",
+					"path": [
+						"api",
+						"values"
+					],
+					"query": [
+						{
+							"key": "filename",
+							"value": "topology1.json"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Read Topology1 From Memory",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44339/api/values?filename=topology1.json",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44339",
+							"path": [
+								"api",
+								"values"
+							],
+							"query": [
+								{
+									"key": "filename",
+									"value": "topology1.json"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Cache-Control",
+							"value": "no-cache"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Expires",
+							"value": "-1"
+						},
+						{
+							"key": "Server",
+							"value": "Microsoft-IIS/10.0"
+						},
+						{
+							"key": "X-AspNet-Version",
+							"value": "4.0.30319"
+						},
+						{
+							"key": "X-SourceFiles",
+							"value": "=?UTF-8?B?RDpcSFxNYXN0ZXIgTWljcm8gVGFza3NcVG9wb2xvZ3kgQVBJXFRvcG9sb2d5IEFQSVxhcGlcdmFsdWVz?="
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "ASP.NET"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 20 May 2022 09:31:38 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "266"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": \"top1\",\n    \"components\": [\n        {\n            \"specs\": {\n                \"default\": 100,\n                \"min\": 10,\n                \"max\": 1000\n            },\n            \"netlist\": {\n                \"t1\": \"vdd\",\n                \"t2\": \"n1\"\n            },\n            \"type\": \"resistor\",\n            \"id\": \"res1\"\n        },\n        {\n            \"specs\": {\n                \"default\": 1.5,\n                \"min\": 1,\n                \"max\": 2\n            },\n            \"netlist\": {\n                \"drain\": \"n1\",\n                \"source\": \"vss\",\n                \"gate\": \"vin\"\n            },\n            \"type\": \"nmos\",\n            \"id\": \"m1\"\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "Read Topology2 From Memory",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Read Topology2 From Memory\",function(){\r",
+							"    pm.response.to.have.status(200);\r",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44339/api/values?filename=topology2.json",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44339",
+					"path": [
+						"api",
+						"values"
+					],
+					"query": [
+						{
+							"key": "filename",
+							"value": "topology2.json"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Read Topology2 From Memory",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44339/api/values?filename=topology2.json",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44339",
+							"path": [
+								"api",
+								"values"
+							],
+							"query": [
+								{
+									"key": "filename",
+									"value": "topology2.json"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Cache-Control",
+							"value": "no-cache"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Expires",
+							"value": "-1"
+						},
+						{
+							"key": "Server",
+							"value": "Microsoft-IIS/10.0"
+						},
+						{
+							"key": "X-AspNet-Version",
+							"value": "4.0.30319"
+						},
+						{
+							"key": "X-SourceFiles",
+							"value": "=?UTF-8?B?RDpcSFxNYXN0ZXIgTWljcm8gVGFza3NcVG9wb2xvZ3kgQVBJXFRvcG9sb2d5IEFQSVxhcGlcdmFsdWVz?="
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "ASP.NET"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 20 May 2022 09:31:45 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "485"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": \"top2\",\n    \"components\": [\n        {\n            \"specs\": {\n                \"default\": 0.67,\n                \"min\": 0.6,\n                \"max\": 0.7\n            },\n            \"netlist\": {\n                \"pterm\": \"vdd\",\n                \"nterm\": \"vss1\"\n            },\n            \"type\": \"diode\",\n            \"id\": \"d1\"\n        },\n        {\n            \"specs\": {\n                \"default\": 1.5,\n                \"min\": 1,\n                \"max\": 2\n            },\n            \"netlist\": {\n                \"drain\": \"vdd\",\n                \"source\": \"gnd\",\n                \"gate\": \"vin\"\n            },\n            \"type\": \"nmos\",\n            \"id\": \"m1\"\n        },\n        {\n            \"specs\": {\n                \"default\": 4,\n                \"min\": 3,\n                \"max\": 5\n            },\n            \"netlist\": {\n                \"t1\": \"vss1\",\n                \"t2\": \"vss2\"\n            },\n            \"type\": \"inductor\",\n            \"id\": \"l1\"\n        },\n        {\n            \"specs\": {\n                \"default\": 5,\n                \"min\": 4,\n                \"max\": 6\n            },\n            \"netlist\": {\n                \"t1\": \"vss2\",\n                \"t2\": \"vdd\"\n            },\n            \"type\": \"capacitor\",\n            \"id\": \"c1\"\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "Write Topology1 to JSON File",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Write Topology1 to JSON File\",function(){\r",
+							"    pm.response.to.have.status(200);\r",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://localhost:44339/api/values/WriteJSON?topologyId=top1",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44339",
+					"path": [
+						"api",
+						"values",
+						"WriteJSON"
+					],
+					"query": [
+						{
+							"key": "topologyId",
+							"value": "top1"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Write Topology1 to JSON File",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://localhost:44339/api/values/WriteJSON?topologyId=top1",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44339",
+							"path": [
+								"api",
+								"values",
+								"WriteJSON"
+							],
+							"query": [
+								{
+									"key": "topologyId",
+									"value": "top1"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Cache-Control",
+							"value": "no-cache"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Expires",
+							"value": "-1"
+						},
+						{
+							"key": "Server",
+							"value": "Microsoft-IIS/10.0"
+						},
+						{
+							"key": "X-AspNet-Version",
+							"value": "4.0.30319"
+						},
+						{
+							"key": "X-SourceFiles",
+							"value": "=?UTF-8?B?RDpcSFxNYXN0ZXIgTWljcm8gVGFza3NcVG9wb2xvZ3kgQVBJXFRvcG9sb2d5IEFQSVxhcGlcdmFsdWVzXFdyaXRlSlNPTg==?="
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "ASP.NET"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 20 May 2022 09:31:50 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "266"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": \"top1\",\n    \"components\": [\n        {\n            \"specs\": {\n                \"default\": 100,\n                \"min\": 10,\n                \"max\": 1000\n            },\n            \"netlist\": {\n                \"t1\": \"vdd\",\n                \"t2\": \"n1\"\n            },\n            \"type\": \"resistor\",\n            \"id\": \"res1\"\n        },\n        {\n            \"specs\": {\n                \"default\": 1.5,\n                \"min\": 1,\n                \"max\": 2\n            },\n            \"netlist\": {\n                \"drain\": \"n1\",\n                \"source\": \"vss\",\n                \"gate\": \"vin\"\n            },\n            \"type\": \"nmos\",\n            \"id\": \"m1\"\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "Write Topology2 to JSON File",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Write Topology2 to JSON File\",function(){\r",
+							"    pm.response.to.have.status(200);\r",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://localhost:44339/api/values/WriteJSON?topologyId=top2",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44339",
+					"path": [
+						"api",
+						"values",
+						"WriteJSON"
+					],
+					"query": [
+						{
+							"key": "topologyId",
+							"value": "top2"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Write Topology2 to JSON File",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://localhost:44339/api/values/WriteJSON?topologyId=top2",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44339",
+							"path": [
+								"api",
+								"values",
+								"WriteJSON"
+							],
+							"query": [
+								{
+									"key": "topologyId",
+									"value": "top2"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Cache-Control",
+							"value": "no-cache"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Expires",
+							"value": "-1"
+						},
+						{
+							"key": "Server",
+							"value": "Microsoft-IIS/10.0"
+						},
+						{
+							"key": "X-AspNet-Version",
+							"value": "4.0.30319"
+						},
+						{
+							"key": "X-SourceFiles",
+							"value": "=?UTF-8?B?RDpcSFxNYXN0ZXIgTWljcm8gVGFza3NcVG9wb2xvZ3kgQVBJXFRvcG9sb2d5IEFQSVxhcGlcdmFsdWVzXFdyaXRlSlNPTg==?="
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "ASP.NET"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 20 May 2022 09:31:57 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "485"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": \"top2\",\n    \"components\": [\n        {\n            \"specs\": {\n                \"default\": 0.67,\n                \"min\": 0.6,\n                \"max\": 0.7\n            },\n            \"netlist\": {\n                \"pterm\": \"vdd\",\n                \"nterm\": \"vss1\"\n            },\n            \"type\": \"diode\",\n            \"id\": \"d1\"\n        },\n        {\n            \"specs\": {\n                \"default\": 1.5,\n                \"min\": 1,\n                \"max\": 2\n            },\n            \"netlist\": {\n                \"drain\": \"vdd\",\n                \"source\": \"gnd\",\n                \"gate\": \"vin\"\n            },\n            \"type\": \"nmos\",\n            \"id\": \"m1\"\n        },\n        {\n            \"specs\": {\n                \"default\": 4,\n                \"min\": 3,\n                \"max\": 5\n            },\n            \"netlist\": {\n                \"t1\": \"vss1\",\n                \"t2\": \"vss2\"\n            },\n            \"type\": \"inductor\",\n            \"id\": \"l1\"\n        },\n        {\n            \"specs\": {\n                \"default\": 5,\n                \"min\": 4,\n                \"max\": 6\n            },\n            \"netlist\": {\n                \"t1\": \"vss2\",\n                \"t2\": \"vdd\"\n            },\n            \"type\": \"capacitor\",\n            \"id\": \"c1\"\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "Get All Topologies From Memory",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Get All Topologies From Memory\",function(){\r",
+							"    pm.response.to.have.status(200);\r",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://localhost:44339/api/values",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44339",
+					"path": [
+						"api",
+						"values"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get All Topologies From Memory",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://localhost:44339/api/values",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44339",
+							"path": [
+								"api",
+								"values"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Cache-Control",
+							"value": "no-cache"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Expires",
+							"value": "-1"
+						},
+						{
+							"key": "Server",
+							"value": "Microsoft-IIS/10.0"
+						},
+						{
+							"key": "X-AspNet-Version",
+							"value": "4.0.30319"
+						},
+						{
+							"key": "X-SourceFiles",
+							"value": "=?UTF-8?B?RDpcSFxNYXN0ZXIgTWljcm8gVGFza3NcVG9wb2xvZ3kgQVBJXFRvcG9sb2d5IEFQSVxhcGlcdmFsdWVz?="
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "ASP.NET"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 20 May 2022 09:32:08 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "754"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": \"top1\",\n        \"components\": [\n            {\n                \"specs\": {\n                    \"default\": 100,\n                    \"min\": 10,\n                    \"max\": 1000\n                },\n                \"netlist\": {\n                    \"t1\": \"vdd\",\n                    \"t2\": \"n1\"\n                },\n                \"type\": \"resistor\",\n                \"id\": \"res1\"\n            },\n            {\n                \"specs\": {\n                    \"default\": 1.5,\n                    \"min\": 1,\n                    \"max\": 2\n                },\n                \"netlist\": {\n                    \"drain\": \"n1\",\n                    \"source\": \"vss\",\n                    \"gate\": \"vin\"\n                },\n                \"type\": \"nmos\",\n                \"id\": \"m1\"\n            }\n        ]\n    },\n    {\n        \"id\": \"top2\",\n        \"components\": [\n            {\n                \"specs\": {\n                    \"default\": 0.67,\n                    \"min\": 0.6,\n                    \"max\": 0.7\n                },\n                \"netlist\": {\n                    \"pterm\": \"vdd\",\n                    \"nterm\": \"vss1\"\n                },\n                \"type\": \"diode\",\n                \"id\": \"d1\"\n            },\n            {\n                \"specs\": {\n                    \"default\": 1.5,\n                    \"min\": 1,\n                    \"max\": 2\n                },\n                \"netlist\": {\n                    \"drain\": \"vdd\",\n                    \"source\": \"gnd\",\n                    \"gate\": \"vin\"\n                },\n                \"type\": \"nmos\",\n                \"id\": \"m1\"\n            },\n            {\n                \"specs\": {\n                    \"default\": 4,\n                    \"min\": 3,\n                    \"max\": 5\n                },\n                \"netlist\": {\n                    \"t1\": \"vss1\",\n                    \"t2\": \"vss2\"\n                },\n                \"type\": \"inductor\",\n                \"id\": \"l1\"\n            },\n            {\n                \"specs\": {\n                    \"default\": 5,\n                    \"min\": 4,\n                    \"max\": 6\n                },\n                \"netlist\": {\n                    \"t1\": \"vss2\",\n                    \"t2\": \"vdd\"\n                },\n                \"type\": \"capacitor\",\n                \"id\": \"c1\"\n            }\n        ]\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "Get Devices in Topology",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Get Devices in Topology\",function(){\r",
+							"    pm.response.to.have.status(200);\r",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://localhost:44339/api/queryDevices?topologyId=top2",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44339",
+					"path": [
+						"api",
+						"queryDevices"
+					],
+					"query": [
+						{
+							"key": "topologyId",
+							"value": "top2"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get Devices in Topology",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://localhost:44339/api/queryDevices?topologyId=top2",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44339",
+							"path": [
+								"api",
+								"queryDevices"
+							],
+							"query": [
+								{
+									"key": "topologyId",
+									"value": "top2"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Cache-Control",
+							"value": "no-cache"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Expires",
+							"value": "-1"
+						},
+						{
+							"key": "Server",
+							"value": "Microsoft-IIS/10.0"
+						},
+						{
+							"key": "X-AspNet-Version",
+							"value": "4.0.30319"
+						},
+						{
+							"key": "X-SourceFiles",
+							"value": "=?UTF-8?B?RDpcSFxNYXN0ZXIgTWljcm8gVGFza3NcVG9wb2xvZ3kgQVBJXFRvcG9sb2d5IEFQSVxhcGlccXVlcnlEZXZpY2Vz?="
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "ASP.NET"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 20 May 2022 09:32:13 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "21"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    \"d1\",\n    \"m1\",\n    \"l1\",\n    \"c1\"\n]"
+				}
+			]
+		},
+		{
+			"name": "Get Devices Connected to Node in Topology",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Get Devices Connected to Node in Topology\",function(){\r",
+							"    pm.response.to.have.status(200);\r",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://localhost:44339/api/queryDevicesWithNetlistNode?topologyId=top2&nodeId=vdd",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44339",
+					"path": [
+						"api",
+						"queryDevicesWithNetlistNode"
+					],
+					"query": [
+						{
+							"key": "topologyId",
+							"value": "top2"
+						},
+						{
+							"key": "nodeId",
+							"value": "vdd"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get Devices Connected to Node in Topology",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://localhost:44339/api/queryDevicesWithNetlistNode?topologyId=top2&nodeId=vdd",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44339",
+							"path": [
+								"api",
+								"queryDevicesWithNetlistNode"
+							],
+							"query": [
+								{
+									"key": "topologyId",
+									"value": "top2"
+								},
+								{
+									"key": "nodeId",
+									"value": "vdd"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Cache-Control",
+							"value": "no-cache"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Expires",
+							"value": "-1"
+						},
+						{
+							"key": "Server",
+							"value": "Microsoft-IIS/10.0"
+						},
+						{
+							"key": "X-AspNet-Version",
+							"value": "4.0.30319"
+						},
+						{
+							"key": "X-SourceFiles",
+							"value": "=?UTF-8?B?RDpcSFxNYXN0ZXIgTWljcm8gVGFza3NcVG9wb2xvZ3kgQVBJXFRvcG9sb2d5IEFQSVxhcGlccXVlcnlEZXZpY2VzV2l0aE5ldGxpc3ROb2Rl?="
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "ASP.NET"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 20 May 2022 09:32:21 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "16"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    \"d1\",\n    \"m1\",\n    \"c1\"\n]"
+				}
+			]
+		},
+		{
+			"name": "Delete Topology From Memory",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Delete Topology From Memory\",function(){\r",
+							"    pm.response.to.have.status(200);\r",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://localhost:44339/api/values?id=top2",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44339",
+					"path": [
+						"api",
+						"values"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "top2"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Delete Topology From Memory",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://localhost:44339/api/values?id=top2",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44339",
+							"path": [
+								"api",
+								"values"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "top2"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Cache-Control",
+							"value": "no-cache"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Expires",
+							"value": "-1"
+						},
+						{
+							"key": "Server",
+							"value": "Microsoft-IIS/10.0"
+						},
+						{
+							"key": "X-AspNet-Version",
+							"value": "4.0.30319"
+						},
+						{
+							"key": "X-SourceFiles",
+							"value": "=?UTF-8?B?RDpcSFxNYXN0ZXIgTWljcm8gVGFza3NcVG9wb2xvZ3kgQVBJXFRvcG9sb2d5IEFQSVxhcGlcdmFsdWVz?="
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "ASP.NET"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 20 May 2022 09:32:27 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "27"
+						}
+					],
+					"cookie": [],
+					"body": "\"Topology has been deleted\""
+				}
+			]
+		}
+	]
+}
